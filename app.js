@@ -1,6 +1,9 @@
-var isSquare = function (n) {
-  const root = Math.sqrt(n);
-  return root % 1 === 0;
-};
+function highAndLow(numbers) {
+  const array = numbers.split(' ');
+  array.sort(function (a, b) {
+    return a - b;
+  });
+  return `${array[array.length - 1]} ${array[0]}`;
+}
 
-console.log(isSquare(8));
+console.log(highAndLow('1 2 3 4 5'));
