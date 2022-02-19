@@ -1,8 +1,9 @@
-function basicOp(operation, value1, value2) {
-  if (operation === '+') return value1 + value2;
-  if (operation === '-') return value1 - value2;
-  if (operation === '*') return value1 * value2;
-  if (operation === '/') return value1 / value2;
+function repeatStr(n, s) {
+  const array = [];
+  for (let i = 0; i < n; i++) {
+    array.push(s);
+  }
+  return array.join('');
 }
 
-console.log(basicOp('+', 1, 3));
+console.log(repeatStr(3, 'nm'));
