@@ -1,12 +1,9 @@
-function sumMul(n, m) {
-  if (n >= m) return 'INVALID';
-  const array = [n];
-  for (let i = 0; n <= m; i++) {
-    array.push(n);
-    n += array[0];
-  }
-  array.shift();
-  return array.reduce((a, b) => a + b);
+function longest(s1, s2) {
+  const array = (s1 + s2).split('');
+  const uniqueArray = [...new Set(array)];
+  return uniqueArray.sort().join('');
 }
 
-console.log(sumMul(2, 9));
+a = 'xyaabbbccccdefww';
+b = 'xxxxyyyyabklmopq';
+console.log(longest(a, b));
