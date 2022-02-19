@@ -1,9 +1,12 @@
-function highAndLow(numbers) {
-  const array = numbers.split(' ');
-  array.sort(function (a, b) {
-    return a - b;
-  });
-  return `${array[array.length - 1]} ${array[0]}`;
+function sumMul(n, m) {
+  if (n >= m) return 'INVALID';
+  const array = [n];
+  for (let i = 0; n <= m; i++) {
+    array.push(n);
+    n += array[0];
+  }
+  array.shift();
+  return array.reduce((a, b) => a + b);
 }
 
-console.log(highAndLow('1 2 3 4 5'));
+console.log(sumMul(2, 9));
