@@ -1,9 +1,6 @@
-function repeatStr(n, s) {
-  const array = [];
-  for (let i = 0; i < n; i++) {
-    array.push(s);
-  }
-  return array.join('');
-}
+var isSquare = function (n) {
+  const root = Math.sqrt(n);
+  return root % 1 === 0;
+};
 
-console.log(repeatStr(3, 'nm'));
+console.log(isSquare(8));
